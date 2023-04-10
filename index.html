@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Easy Painter with Canvas</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="painter">
+            <canvas id="canvas">
+            </canvas>
+        </div>
+
+        <div class="tools">
+            <ul class="tools-list">
+                <li class="tools-list__item">
+                    <label class="tools-list__item-label" for="bg-color-picker">Chọn màu nền</label>
+                    <input class="tools-list__item-color" type="color" name="bg-color-picker" id="bg-color-input">
+                </li>
+                <li class="tools-list__item">
+                    <label class="tools-list__item-label" for="bg-color-picker">Chọn màu vẽ</label>
+                    <input class="tools-list__item-color" type="color" name="bg-color-picker" id="line-color-input">
+                </li>
+                <li class="tools-list__item">
+                    <label class="tools-list__item-label" for="width-painter">Chiều rộng</label>
+                    <input min="0" class="tools-list__item-text" type="number" name="width-painter" id="width-painter">
+                </li>
+                <li class="tools-list__item">
+                    <label class="tools-list__item-label" for="height-painter">Chiều cao</label>
+                    <input min="0" class="tools-list__item-text" type="number" name="height-painter" id="height-painter">
+                </li>
+            </ul>
+            <button title="Kéo kéo kéo hehehehehe" class="tools-pull-btn">
+                <i class="fa-solid fa-braille"></i>
+            </button>
+        </div>
+    </div>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/painter.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

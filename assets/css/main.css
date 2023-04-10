@@ -1,0 +1,128 @@
+:root {
+    --white-color: #fff;
+
+    --wrapper-bg-color: #cad7ed;
+    --tools-bg-color: #f3f3f3;
+
+    --tools-border-color: #9e9e9e;
+    --tools-item-label-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+    list-style-type: none;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 62.5%;
+}
+
+.wrapper {
+    position: fixed;
+    inset: 0;
+    background-color: var(--wrapper-bg-color);
+}
+
+.tools {
+    user-select: none;
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -24px);
+    background-color: var(--tools-bg-color);
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px var(--tools-border-color);
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.tools-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tools-list__item-color {
+    width: 50px;
+    height: 100%;
+}
+
+.tools-list__item-text {
+    width: 60px;
+    height: 100%;
+    padding: 6px;
+}
+
+.tools-list__item {
+    cursor: pointer;
+    padding: 0 8px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tools-list__item-label {
+    bottom: calc(100% + 12px);
+    right: 50%;
+    width: max-content;
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    padding: 6px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: var(--tools-item-label-color);
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all .2s ease;
+}
+
+.tools-list__item:hover 
+.tools-list__item-label {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tools-list {
+    padding: 8px;
+}
+
+.tools-pull-btn {
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.tools-pull-btn > svg {
+    width: 100%;
+    font-size: 2rem;
+}
+
+/* CANVAS PAINTER */
+.painter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#canvas {
+    cursor: crosshair;
+    background-color: var(--white-color);
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+}
