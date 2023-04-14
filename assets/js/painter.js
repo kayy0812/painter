@@ -19,6 +19,7 @@ class Painter extends Option {
     init() {
         var bgColor = document.getElementById('bg-color-input')
         var lineColor = document.getElementById('line-color-input')
+        var lineWidth = document.getElementById('size-line')
         var width = document.getElementById('width-painter')
         var height = document.getElementById('height-painter')
         var canvas = document.getElementById('canvas')
@@ -28,6 +29,7 @@ class Painter extends Option {
         lineColor.value = this.lineColor
         width.value = this.width
         height.value = this.height
+        lineWidth.value = this.lineWidth
 
         canvas.width = this.width
         canvas.height = this.height
@@ -41,6 +43,7 @@ class Painter extends Option {
         this.dom = {
             bgColor,
             lineColor,
+            lineWidth,
             width,
             height,
             canvas
@@ -69,8 +72,20 @@ class Painter extends Option {
         this.load()
     }
 
+    setWidth(width) {
+        this.width = width
+    }
+
+    setHeight(height) {
+        this.height = height
+    }
+
     setLineColor(lineColor) {
         this.lineColor = lineColor
+    }
+
+    setLineWidth(lineWidth) {
+        this.lineWidth = lineWidth
     }
 
     setStore(x, y, s, c) {

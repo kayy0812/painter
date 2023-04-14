@@ -54,6 +54,19 @@ html {
     height: 100%;
 }
 
+.tools-list__item-size {
+    width: 100px;
+    height: 100%;
+}
+
+.tools-list__item-size-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8px;
+    font-size: 1.4rem;
+}
+
 .tools-list__item-color {
     width: 50px;
     height: 100%;

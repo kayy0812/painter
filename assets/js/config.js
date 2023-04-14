@@ -3,7 +3,7 @@ const config = (function () {
         backgroundColor: '#ffffff',
         lineColor: '#000000',
         lineWidth: 4,
-        width: 800,
-        height: 400
+        width: 1200,
+        height: 500
     }
 })()
